@@ -1,0 +1,89 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Filter & Click Photo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+  <style type="text/css">
+    body{
+      height: 100%;
+    }
+  h3
+  {
+    font-size: 25px !important;
+  }
+  canvas {
+  	border:1px solid black;
+    bottom: 20%;
+  }
+  .parallax {
+		  /* The image used */
+      background-image: url('https://img.freepik.com/free-photo/3d-rendering-minimal-pastel-camera-pink-turquoise-background_54454-28.jpg?w=2000');
+		  
+		
+		  /* Set a specific height */
+		  min-height: 500px; 
+		
+		  /* Create the parallax scrolling effect */
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+    #myDIV {
+  width: 300px;
+  height: 100px;
+  background-color: lightpink;
+  border: 15px solid coral;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  50% {border-color: lightblue;}
+}
+  </style>
+  
+</head>
+
+<body style="background-image: url(''); background-size: cover; background-repeat: no-repeat; bottom: 10%; background-color:rgb(92, 188, 223);" id="body1">
+  <div class="parallax">
+    <div style="height: 200px; background-color:rgb(143, 209, 232);font-size:36px; color:black;">
+    <label style="font-family: 'Courier New', Courier, monospace;" class="text-capitalize">Welcome! This Webpage Is all about chossing a colored-filter and clicking-save your personalized picture! Just Scroll below, enter your preferable color name and click on the button to get your filter! Simple, isn't it? Let's begin!</label>
+    </div>
+   
+  <div class="container" style="text-align: center; bottom: 20%; font-family: 'Courier New', Courier, monospace;">
+    <div class="floating">
+	<h3 style="text-align: center; width: 100%; margin-left: 35%;"><div id="myDiv">Chooose FIlter and Click Photo!</div></h3>
+	<hr style="color: black;">
+  <label>Filter Color</label>
+  <input type="text" placeholder="Enter Filter Color" id="input_color">
+  <br>
+  <br>
+  <button onclick="filter_color();" class="btn btn-info" style="max-width: 400%;">Apply Filter Now!</button>
+  <br><br>
+  <button onclick="take_snapshot()" class="btn btn-info" style="max-width: 400%;">Take Snapshot</button>
+  </div>
+</div>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+  <div class="floating" style="width: 50px; height: 60px; border-color: black; border-width: 1; background-color:palevioletred;text-align: right;"></div>
+<script>
+  function draw(){
+ document.getElementById("myCanvas").draw=circle(890, 160, 20);
+}
+</script>
+</canvas>
+</div>
+<canvas id="myCanvas2" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+<div class="floating" style="width: 50px; height: 60px; border-color: black; border-width: 1; background-color:palevioletred; left:20%;"></div>
+<div class="floating" style="border-radius: 50%; width: 200px; height: 200px;  border-color: black; border-width: 1; background-color:dodgerblue; left:20%;"></div>
+<script src="main.js"></script>
+</body>
+
+</html>

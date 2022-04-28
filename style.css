@@ -1,0 +1,86 @@
+body{
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/001/437/080/small/geometric-abstract-with-memphis-style-background-free-vector.jpg');
+    background-size: cover;
+}
+  hr{
+    color: black;
+  }
+  button{
+    max-width: 400%;
+  }
+  #myCanvas{
+    position: absolute;
+    left: 10%;
+    padding-left: 900px;
+    background-color:#03adf4;
+    top: 70%;
+    height: 50%;
+    width: 50%;
+    bottom: 10%;
+  }
+  #myCanvas2{
+    position: absolute;
+    left: 30%;
+    padding-left: 900px;
+    background-color: #1cabc1;;
+    top: 80%;
+    height: 50%;
+    width: 50%;
+    bottom: 10%;
+    box-shadow: black;
+  }
+  .box{
+    width: 300px; height: 200px;
+    background-color: #DDFFF7;
+    position: relative;
+    box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.75);
+  }
+  .box:after, .box:before{
+    mix-blend-mode:multiply;
+    filter:none;
+    z-index: -1;
+    content:'';
+    width:calc(100% + (50px * 2));
+    height:calc(100% + (50px * 2));
+    position: absolute;
+    display: block;
+    animation: border 10s ease-in-out infinite;
+    transform:translateX(-50px) translateY(-50px);
+  }
+  @keyframes border {
+    0%, 100% {
+      -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+              clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+    }
+    50% {
+      -webkit-clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+              clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+    }
+  }
+  
+  .box:after{
+    animation-delay: -5s;
+    background-color: #93e1d8;
+    clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+  }
+  .box:before {
+    background-color: #AA4465;
+      clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+  }
+  
+  .box:hover:after{
+    animation-delay: -0.1s;
+  }
+  .box:hover:before, .box:hover:after {
+  
+            animation-duration: 0.2s;
+  }
+  .floating {
+    animation: floating 6s ease-in-out infinite
+  }
+  
+  @keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-16px); }
+    100% { transform: translateY(0); }
+  }
